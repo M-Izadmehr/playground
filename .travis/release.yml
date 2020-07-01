@@ -8,7 +8,7 @@ jobs:
     - stage: release
       node_js: lts/*
       before_install:
-        - .travis/chmod +x build.sh
+        - chmod +x .travis/build.sh
       install:
         - travis_retry npm install
       script:
