@@ -10,4 +10,4 @@ jobs:
       install:
         - travis_retry npm install
       script:
-        - ./push.sh
+        - .travis/push.sh
