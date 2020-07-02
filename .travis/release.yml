@@ -14,7 +14,8 @@ jobs:
       after_success:
         - git config --global user.email "$EMAIL"
         - git config --global user.name "Mojtaba Izadmehr"
-        - git checkout master
+        - curl -u "m-izadmehr:<MYTOKEN>" https://github.com/M-Izadmehr/playground.git
+        - git clone https://github.com/M-Izadmehr/playground.git
         - git add .
         - git commit --message "Travis build - $TRAVIS_BUILD_NUMBER"
         - git remote add origin https://${GH_TOKEN}@github.com/m-izadmehr/playground.git > /dev/null 2>&1
