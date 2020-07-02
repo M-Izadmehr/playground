@@ -11,5 +11,7 @@ jobs:
         - chmod +x .travis/push.sh
       install:
         - travis_retry npm install
+      script:
+        - node --version
       after_success:
         - .travis/push.sh
