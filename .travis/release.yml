@@ -12,6 +12,6 @@ jobs:
       install:
         - travis_retry npm install
       script:
-        - node --version
+        - npm run release
       after_success:
         - .travis/push.sh
